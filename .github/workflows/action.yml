@@ -16,9 +16,7 @@ jobs:
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Show report date'
-        run: echo (${{env.REPORT_DATE}}
-      - name: 'Show report file'
-        run: tail file://result.html
+        run: echo "$REPORT_DATE"
 #       - name: 'Send mail'
 #         uses: dawidd6/action-send-mail@master
 #         with:
